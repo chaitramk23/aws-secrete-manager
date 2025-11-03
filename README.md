@@ -61,7 +61,7 @@ eksctl create cluster --name ashokit-cluster4 --region ap-south-1 --node-type t2
 
 ### We are done with our Setup ###
 
-=============================================================================================
+============================================================================================
 
 # aws-eks-secret-csi-demo
 
