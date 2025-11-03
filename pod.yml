@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-secret-pod
+  labels:
+    app: nginx-secret
+spec:
+  serviceAccountName: secrets-store-sa
+  containers:
+  - name: nginx
+    image: nginx:latest
+    ports:
+      - containerPort: 80
+    volumeMounts:
+      - name: secrets-store
+        mountPath: "/usr/share/nginx/html/secrets"
+        readOnly: true
+  volumes:
+  - name: secrets-store
+    csi:
+      driver: secrets-store.csi.k8s.io
+      readOnly: true
+      volumeAttributes:
+        secretProviderClass: "aws-secrets"
