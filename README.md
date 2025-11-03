@@ -1,0 +1,1 @@
+# aws-secrete-manager
