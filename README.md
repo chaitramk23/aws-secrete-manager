@@ -182,5 +182,5 @@ kubectl annotate serviceaccount my-sa eks.amazonaws.com/role-arn=<role arn>
 ## Step - 4 : After your practise, delete Cluster and other resources we have used in AWS Cloud to avoid billing ##
 
 ```
-eksctl delete cluster --name ashokit-cluster4 --region ap-south-1
+eksctl delete cluster --name chaitra-cluster4 --region ap-south-1
 ```
